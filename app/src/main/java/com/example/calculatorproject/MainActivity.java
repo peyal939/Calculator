@@ -160,8 +160,9 @@ public class MainActivity extends AppCompatActivity {
 
         DecimalFormat df = new DecimalFormat("#.####");
         resultView.setText("Result: " + df.format(result));
+        DecimalFormat sf =new DecimalFormat("#");
 
-        String historyEntry = num1 + " " + operatorSymbol + " " + num2 + " = " + result;
+        String historyEntry = num1 + " " + operatorSymbol + " " + num2 + " = " + df.format(result);
         historyArray.add(0, historyEntry);
         historyAdapter.notifyDataSetChanged();
     }
@@ -207,8 +208,9 @@ public class MainActivity extends AppCompatActivity {
 
         DecimalFormat df = new DecimalFormat("#.####");
         resultView.setText("Result: " + df.format(result));
+        DecimalFormat sf =new DecimalFormat("#.##");
 
-        String historyEntry = num1 + " " + operator + " = " + result;
+        String historyEntry = operator + " " + num1 + " " + " = " + df.format(result);
         historyArray.add(0, historyEntry);
         historyAdapter.notifyDataSetChanged();
     }
